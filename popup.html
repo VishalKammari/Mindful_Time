@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Productivity Tracker</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 15px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    .pie-container {
+      width: 150px;
+      height: 150px;
+      margin: 10px auto;
+      position: relative;
+    }
+    .pie-chart {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      border-radius: 50%;
+      background: conic-gradient(#4CAF50 var(--productive-percent, 0%), #f44336 var(--productive-percent, 0%));
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .pie-tooltip {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .pie-legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin: 5px 0;
+      font-size: 12px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .legend-color {
+      width: 10px;
+      height: 10px;
+      border-radius: 2px;
+    }
+    .legend-productive {
+      background-color: #4CAF50;
+    }
+    .legend-nonproductive {
+      background-color: #f44336;
+    }
+    .top-sites-container {
+      margin-top: 10px;
+      border-top: 1px solid #eee;
+      padding-top: 10px;
+    }
+    .top-sites-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+      font-size: 13px;
+    }
+    .sites-list {
+      max-height: 120px;
+      overflow-y: auto;
+      padding-right: 5px;
+    }
+    .site-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px;
+      margin: 3px 0;
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .site-name {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 200px;
+    }
+    .site-time {
+      font-family: monospace;
+      color: #666;
+      margin-left: 10px;
+      font-size: 11px;
+    }
+    /* Scrollbar styling */
+    .sites-list::-webkit-scrollbar {
+      width: 4px;
+    }
+    .sites-list::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 2px;
+    }
+    .sites-list::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 2px;
+    }
+    .sites-list::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="pie-container">
+    <div class="pie-chart" id="pieChart"></div>
+    <div class="pie-tooltip" id="pieTooltip"></div>
+    <div class="pie-legend">
+      <div class="legend-item">
+        <div class="legend-color legend-productive"></div>
+        <span id="productivePercent">Productive (0%)</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color legend-nonproductive"></div>
+        <span id="nonProductivePercent">Non-Productive (0%)</span>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="top-sites-container">
+    <div class="top-sites-title">Top Visited Sites</div>
+    <div class="sites-list" id="sitesList">
+      <!-- Sites will be added here dynamically -->
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
