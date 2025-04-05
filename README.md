@@ -11,8 +11,8 @@ A browser extension that helps you track and manage your productive and non-prod
 - Warning system for non-productive sites
 
 
+![Screenshot 2025-04-05 153431](https://github.com/user-attachments/assets/bc8b166c-4568-4f69-855c-72a259364fb1)
 
-![image](https://github.com/user-attachments/assets/3f42633d-7234-4bf6-83f6-322ffca1a9dc)
 
 
 ## Installation
