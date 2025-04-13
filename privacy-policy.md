@@ -1,6 +1,6 @@
 # Privacy Policy for Productivity Tracker Extension
 
-Last Updated: [Current Date]
+
 
 ## Introduction
 The Productivity Tracker Extension ("we", "our", or "the extension") is committed to protecting your privacy. This Privacy Policy explains our data collection, use, and disclosure practices for the extension.
