@@ -1,4 +1,6 @@
 # Productivity Tracker Browser Extension
+link
+https://microsoftedge.microsoft.com/addons/detail/baighpbafnoionmmkonmijpmhbjfnign
 
 A browser extension that helps you track and manage your productive and non-productive screen time.
 
@@ -61,3 +63,4 @@ This extension requires the following permissions:
 Feel free to submit issues and enhancement requests!
 
 #
+
